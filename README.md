@@ -1,12 +1,41 @@
-# React + Vite
+# ⏱️ Time Tracking Web App (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack time tracking and productivity app that allows users to log time on different projects, generate summaries, and optionally bill by hours. Built using the MERN stack (MongoDB, Express.js, React, Node.js).
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔥 Features
+
+- 👤 User registration & login with JWT
+- 📁 Create, update, and delete projects
+- ⏱️ Start and stop timers for tasks
+- 📊 Weekly summary reports
+- 🔐 Protected routes with authentication
+- ⚡ Fast, responsive UI (Tailwind CSS)
+
+---
+
+## 🧰 Tech Stack
+
+**Frontend**:  
+- React  
+- Tailwind CSS  
+- Axios  
+
+**Backend**:  
+- Node.js  
+- Express.js  
+- MongoDB (Mongoose)  
+- JWT Authentication  
+
+---
+
+## 🏁 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/time-tracking-app.git
+cd time-tracking-app
