@@ -12,7 +12,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/register', form);
+      await axios.post('/user/register', form);
      navigate('/login');
  
     } catch (err) {

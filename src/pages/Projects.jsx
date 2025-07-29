@@ -6,7 +6,7 @@ import axios from '../api/axios';
   const [form, setForm] = useState({ name: '', description: '' });
 
   const loadProjects = async () => {
-    const res = await axios.get('/projects');
+    const res = await axios.get('/project');
     setProjects(res.data);
   };
 
@@ -16,13 +16,13 @@ import axios from '../api/axios';
       return;
     }
 
-    await axios.post('/projects', form);
+    await axios.post('/project', form);
     setForm({ name: '', description: '' });
     loadProjects();
   };
 
   const deleteProject = async (id) => {
-    await axios.delete(`/projects/${id}`);
+    await axios.delete(`/project/${id}`);
     loadProjects();
   };
 

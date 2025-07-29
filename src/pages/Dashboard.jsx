@@ -1,7 +1,8 @@
-// 📁 src/pages/Dashboard.jsx
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Tasks from "./Tasks";
 
 export default function Dashboard() {
   const [projects, setProjects] = useState([]);
@@ -120,7 +121,7 @@ export default function Dashboard() {
           Add Project
         </button>
       </form>
-
+      
       {/* Navigation Buttons */}
       <div className="mt-10 flex gap-4 justify-center">
         <button
@@ -140,7 +141,7 @@ export default function Dashboard() {
   );
 }
 
-// 🔹 Reusable Stat Card component
+
 function StatCard({ title, value, color }) {
   const colorClass = {
     blue: "text-blue-600",
