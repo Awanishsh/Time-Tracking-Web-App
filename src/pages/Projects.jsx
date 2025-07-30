@@ -6,7 +6,7 @@ import axios from '../api/axios';
   const [form, setForm] = useState({ name: '', description: '' });
 
   const loadProjects = async () => {
-    const res = await axios.get('/project');
+    const res = await axios.get('https://time-tracking-web-app-backed-3.onrender.com/project');
     setProjects(res.data);
   };
 
@@ -22,7 +22,7 @@ import axios from '../api/axios';
   };
 
   const deleteProject = async (id) => {
-    await axios.delete(`/project/${id}`);
+    await axios.delete(`https://time-tracking-web-app-backed-3.onrender.com/project/${id}`);
     loadProjects();
   };
 
