@@ -41,13 +41,13 @@ export default function Dashboard() {
     try {
       const config = getAuthConfig();
 
-      const projectRes = await axios.get("http://localhost:5000/api/v1/project", config);
+      const projectRes = await axios.get("/api/v1/project", config);
       const fetchedProjects = projectRes.data;
       setProjects(fetchedProjects);
 
       const allTasks = [];
       for (const project of fetchedProjects) {
-        const taskRes = await axios.get(`http://localhost:5000/api/v1/tasks/${project._id}`, config);
+        const taskRes = await axios.get(`/api/v1/tasks/${project._id}`, config);
         allTasks.push(...taskRes.data);
       }
       setTasks(allTasks);
@@ -68,7 +68,7 @@ export default function Dashboard() {
 
     try {
       const config = getAuthConfig();
-      await axios.post("http://localhost:5000/api/v1/project", newProject, config);
+      await axios.post("/api/v1/project", newProject, config);
 
       setNewProject({ name: "", description: "" });
       loadData(); 
